@@ -13,21 +13,17 @@ import Processors from "kepler.gl/processors";
 import KeplerGlSchema from "kepler.gl/schemas";
 import mapConfigJson from "./geodata/config-all.json";
 
-//const parkData = React.lazy(()=>import('./geodata/Bus_Routes.js'))
-import busRouteData from "./geodata/Bus_Routes.js";
-import ParkMapData from "./geodata/Parks.js";
-import busStopData from "./geodata/Bus_Stops.js";
 import roomData from "./geodata/ratings.js";
-
+import railStationData from "./geodata/UKRailStations.js";
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN; // eslint-disable-line
 
 class App extends Component {
   componentDidMount() {
     // Use processCsvData helper to convert csv file into kepler.gl structure {fields, rows}
     // const processedBusRouteData = Processors.processGeojson(busRouteData);
-    const processedParkMapData = Processors.processGeojson(ParkMapData);
-    const processedBusStopData = Processors.processGeojson(busStopData);
+
     const processedRoompData = Processors.processGeojson(roomData);
+    const processedRailData = Processors.processGeojson(railStationData);
 
     // Create dataset structure
     const dataset1 = {
@@ -41,57 +37,50 @@ class App extends Component {
     };
 
     const dataset2 = {
-      data: processedParkMapData,
+      data: processedRailData,
       info: {
-        label: "Parks",
+        label: "RailStation",
         // this is used to match the dataId defined in nyc-config.json. For more details see API documentation.
         // It is paramount that this id matches your configuration otherwise the configuration file will be ignored.
-        id: "mty4ajbu",
+        id: "i91q045g",
       },
     };
-
-    const dataset3 = {
-      data: processedBusStopData,
-      info: {
-        label: "Bus Stops",
-        // this is used to match the dataId defined in nyc-config.json. For more details see API documentation.
-        // It is paramount that this id matches your configuration otherwise the configuration file will be ignored.
-        id: "dgunthvkn",
-      },
-    };
-
     // addDataToMap action to inject dataset into kepler.gl instance
     //hide side bar options: {readOnly: true}
     this.props.dispatch(
       addDataToMap({
-        datasets: [dataset1, dataset2, dataset3],
+        datasets: [dataset1, dataset2],
         config: mapConfigJson,
       })
     );
+    // this.props.dispatch(
+    //   addDataToMap({
+    //     datasets: [dataset4],
+    //     options: { centerMap: true, readOnly: true },
+    //   })
+    // );
   }
 
   render() {
     return (
-      <div>
-        <div
-          style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            minHeight: "70vh",
-          }}
-        >
-          <AutoSizer>
-            {({ height, width }) => (
-              <KeplerGl
-                mapboxApiAccessToken={MAPBOX_TOKEN}
-                id="map"
-                width={width}
-                height={height}
-              />
-            )}
-          </AutoSizer>
-        </div>
+      <div
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          minHeight: "70vh",
+        }}
+      >
+        <AutoSizer>
+          {({ height, width }) => (
+            <KeplerGl
+              mapboxApiAccessToken={MAPBOX_TOKEN}
+              id="map"
+              width={width}
+              height={height}
+            />
+          )}
+        </AutoSizer>
       </div>
     );
   }

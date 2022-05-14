@@ -5,145 +5,6 @@
       "filters": [],
       "layers": [
         {
-          "id": "5fhybqj",
-          "type": "point",
-          "config": {
-            "dataId": "dgunthvkn",
-            "label": "Bus Stops",
-            "color": [255, 152, 51],
-            "columns": {
-              "lat": "WGS84_LATITUDE",
-              "lng": "WGS84_LONGITUDE",
-              "altitude": null
-            },
-            "isVisible": true,
-            "visConfig": {
-              "radius": 2,
-              "fixedRadius": false,
-              "opacity": 0.8,
-              "outline": false,
-              "thickness": 2,
-              "strokeColor": null,
-              "colorRange": {
-                "name": "Global Warming",
-                "type": "sequential",
-                "category": "Uber",
-                "colors": [
-                  "#5A1846",
-                  "#900C3F",
-                  "#C70039",
-                  "#E3611C",
-                  "#F1920E",
-                  "#FFC300"
-                ]
-              },
-              "strokeColorRange": {
-                "name": "Global Warming",
-                "type": "sequential",
-                "category": "Uber",
-                "colors": [
-                  "#5A1846",
-                  "#900C3F",
-                  "#C70039",
-                  "#E3611C",
-                  "#F1920E",
-                  "#FFC300"
-                ]
-              },
-              "radiusRange": [0, 50],
-              "filled": true
-            },
-            "textLabel": []
-          },
-          "visualChannels": {
-            "colorField": null,
-            "colorScale": "quantile",
-            "strokeColorField": null,
-            "strokeColorScale": "quantile",
-            "sizeField": null,
-            "sizeScale": "linear"
-          }
-        },
-        {
-          "id": "cq8v0yl",
-          "type": "geojson",
-          "config": {
-            "dataId": "mty4ajbu",
-            "label": "Parks",
-            "color": [18, 92, 119],
-            "columns": {
-              "geojson": "_geojson"
-            },
-            "isVisible": true,
-            "visConfig": {
-              "opacity": 1,
-              "thickness": 0.5,
-              "strokeColor": [77, 193, 156],
-              "colorRange": {
-                "name": "ColorBrewer YlGn-6",
-                "type": "sequential",
-                "category": "ColorBrewer",
-                "colors": [
-                  "#ffffcc",
-                  "#d9f0a3",
-                  "#addd8e",
-                  "#78c679",
-                  "#31a354",
-                  "#006837"
-                ],
-                "reversed": false
-              },
-              "strokeColorRange": {
-                "name": "Global Warming",
-                "type": "sequential",
-                "category": "Uber",
-                "colors": [
-                  "#5A1846",
-                  "#900C3F",
-                  "#C70039",
-                  "#E3611C",
-                  "#F1920E",
-                  "#FFC300"
-                ]
-              },
-              "radius": 10,
-              "sizeRange": [0, 10],
-              "radiusRange": [0, 50],
-              "heightRange": [0, 500],
-              "elevationScale": 5,
-              "stroked": true,
-              "filled": true,
-              "enable3d": false,
-              "wireframe": false
-            },
-            "textLabel": [
-              {
-                "field": null,
-                "color": [255, 255, 255],
-                "size": 18,
-                "offset": [0, 0],
-                "anchor": "start",
-                "alignment": "center"
-              }
-            ]
-          },
-          "visualChannels": {
-            "colorField": {
-              "name": "Shape_Area",
-              "type": "real"
-            },
-            "colorScale": "quantile",
-            "sizeField": null,
-            "sizeScale": "linear",
-            "strokeColorField": null,
-            "strokeColorScale": "quantile",
-            "heightField": null,
-            "heightScale": "linear",
-            "radiusField": null,
-            "radiusScale": "linear"
-          }
-        },
-        {
           "id": "8fbtcjk",
           "type": "geojson",
           "config": {
@@ -221,6 +82,83 @@
             "radiusField": null,
             "radiusScale": "linear"
           }
+        },
+        {
+          "id": "h8ux44k",
+          "type": "geojson",
+          "config": {
+            "dataId": "i91q045g",
+            "label": "rail_layer",
+            "color": [158, 219, 107],
+            "highlightColor": [252, 242, 26, 255],
+            "columns": { "geojson": "_geojson" },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.8,
+              "strokeOpacity": 0.54,
+              "thickness": 0.5,
+              "strokeColor": [98, 206, 173],
+              "colorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#5A1846",
+                  "#900C3F",
+                  "#C70039",
+                  "#E3611C",
+                  "#F1920E",
+                  "#FFC300"
+                ]
+              },
+              "strokeColorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#5A1846",
+                  "#900C3F",
+                  "#C70039",
+                  "#E3611C",
+                  "#F1920E",
+                  "#FFC300"
+                ]
+              },
+              "radius": 10,
+              "sizeRange": [0, 10],
+              "radiusRange": [0, 50],
+              "heightRange": [0, 500],
+              "elevationScale": 5,
+              "enableElevationZoomFactor": true,
+              "stroked": true,
+              "filled": true,
+              "enable3d": false,
+              "wireframe": false
+            },
+            "hidden": false,
+            "textLabel": [
+              {
+                "field": null,
+                "color": [255, 255, 255],
+                "size": 18,
+                "offset": [0, 0],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": null,
+            "colorScale": "quantile",
+            "strokeColorField": null,
+            "strokeColorScale": "quantile",
+            "sizeField": null,
+            "sizeScale": "linear",
+            "heightField": null,
+            "heightScale": "linear",
+            "radiusField": null,
+            "radiusScale": "linear"
+          }
         }
       ],
       "interactionConfig": {
@@ -253,19 +191,14 @@
               "Four or More Bedrooms Lower quartile",
               "Four or More Bedrooms Upper quartile"
             ],
-            "mty4ajbu": [
-              "COMMON_NAME",
-              "SHORT_NAME",
-              "PARK_TYPE",
-              "STREET_ADDRESS",
-              "DESCRIPTION"
-            ],
-            "dgunthvkn": [
-              "OBJECTID",
-              "ProjectID",
-              "ProjectName",
-              "PlatformTag",
-              "PlatformNo"
+
+            "i91q045g": [
+              "NLC",
+              "Origin TLC",
+              "Station Name",
+              "Location for map",
+              "Latitude",
+              "format"
             ]
           },
           "enabled": true
@@ -273,7 +206,8 @@
         "brush": {
           "size": 0.5,
           "enabled": false
-        }
+        },
+        "geocoder": { "enabled": true }
       },
       "layerBlending": "normal",
       "splitMaps": []
