@@ -17,7 +17,7 @@ import mapConfigJson from "./geodata/config-all.json";
 import busRouteData from "./geodata/Bus_Routes.js";
 import ParkMapData from "./geodata/Parks.js";
 import busStopData from "./geodata/Bus_Stops.js";
-import roomData from "./geodata/attempt2.js";
+import roomData from "./geodata/ratings.js";
 
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN; // eslint-disable-line
 

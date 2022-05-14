@@ -5,56 +5,58 @@
       "filters": [],
       "layers": [
         {
-          "id": "qwert",
+          "id": "8fbtcjk",
           "type": "geojson",
           "config": {
             "dataId": "roomprice",
-            "label": "London Rental Price",
-            "color": [18, 92, 119],
-            "columns": {
-              "geojson": "_geojson"
-            },
+            "label": "London Rental Info",
+            "color": [30, 150, 190],
+            "highlightColor": [252, 242, 26, 255],
+            "columns": { "geojson": "_geojson" },
             "isVisible": true,
             "visConfig": {
-              "opacity": 0.8,
-              "thickness": 0.5,
-              "strokeColor": null,
+              "opacity": 0.64,
+              "strokeOpacity": 0.8,
+              "thickness": 0.3,
+              "strokeColor": [255, 253, 196],
               "colorRange": {
+                "name": "ColorBrewer OrRd-6",
+                "type": "sequential",
+                "category": "ColorBrewer",
+                "colors": [
+                  "#fef0d9",
+                  "#fdd49e",
+                  "#fdbb84",
+                  "#fc8d59",
+                  "#e34a33",
+                  "#b30000"
+                ]
+              },
+              "strokeColorRange": {
                 "name": "Global Warming",
                 "type": "sequential",
                 "category": "Uber",
                 "colors": [
-                  "#7B3294",
-                  "#C2A5CF",
-                  "#F7F7F7",
-                  "#A6DBA0",
-                  "#008837"
+                  "#5A1846",
+                  "#900C3F",
+                  "#C70039",
+                  "#E3611C",
+                  "#F1920E",
+                  "#FFC300"
                 ]
-              },
-              "strokeColorRange": {
-                "name": "ColorBrewer Dark2-6",
-                "type": "qualitative",
-                "category": "ColorBrewer",
-                "colors": [
-                  "#1b9e77",
-                  "#d95f02",
-                  "#7570b3",
-                  "#e7298a",
-                  "#66a61e",
-                  "#e6ab02"
-                ],
-                "reversed": false
               },
               "radius": 10,
               "sizeRange": [0, 10],
               "radiusRange": [0, 50],
               "heightRange": [0, 500],
               "elevationScale": 5,
+              "enableElevationZoomFactor": true,
               "stroked": true,
-              "filled": false,
+              "filled": true,
               "enable3d": false,
               "wireframe": false
             },
+            "hidden": false,
             "textLabel": [
               {
                 "field": null,
@@ -67,15 +69,12 @@
             ]
           },
           "visualChannels": {
-            "colorField": null,
+            "colorField": { "name": "rating", "type": "integer" },
             "colorScale": "quantile",
+            "strokeColorField": null,
+            "strokeColorScale": "quantile",
             "sizeField": null,
             "sizeScale": "linear",
-            "strokeColorField": {
-              "name": "RouteName",
-              "type": "string"
-            },
-            "strokeColorScale": "ordinal",
             "heightField": null,
             "heightScale": "linear",
             "radiusField": null,
@@ -87,32 +86,52 @@
         "tooltip": {
           "fieldsToShow": {
             "roomprice": [
+              "rating",
               "Studio Mean",
-              "Count of rents",
-              "Mean",
-              "Lower quartile",
-              "Median",
-              "Upper quartile",
-              "Postcode District"
+              "Studio Median",
+              "Studio Lower quartile",
+              "Studio Upper quartile",
+              "station",
+              "crimenumber",
+              "High incidence cases",
+              "Two Bedrooms Mean",
+              "One Bedroom Mean",
+              "One Bedroom Median",
+              "One Bedroom Lower quartile",
+              "One Bedroom Upper quartile",
+              "Two Bedrooms Mean",
+              "Two Bedrooms Median",
+              "Two Bedrooms Lower quartile",
+              "Two Bedrooms Upper quartile",
+              "Three Bedrooms Mean",
+              "Three Bedrooms Median",
+              "Three Bedrooms Lower quartile",
+              "Three Bedrooms Upper quartile",
+              "Four or More Bedrooms Mean",
+              "Four or More Bedrooms Median",
+              "Four or More Bedrooms Lower quartile",
+              "Four or More Bedrooms Upper quartile"
             ]
           },
+          "compareMode": false,
+          "compareType": "absolute",
           "enabled": true
         },
-        "brush": {
-          "size": 0.5,
-          "enabled": false
-        }
+        "brush": { "size": 0.5, "enabled": false },
+        "geocoder": { "enabled": false },
+        "coordinate": { "enabled": false }
       },
       "layerBlending": "normal",
-      "splitMaps": []
+      "splitMaps": [],
+      "animationConfig": { "currentTime": null, "speed": 1 }
     },
     "mapState": {
       "bearing": 0,
       "dragRotate": false,
-      "latitude": 0.03332,
-      "longitude": 51.41892,
+      "latitude": 51.45938874564504,
+      "longitude": -0.11562520579310488,
       "pitch": 0,
-      "zoom": 12.288353501501714,
+      "zoom": 9.544597400164834,
       "isSplit": false
     },
     "mapStyle": {
@@ -127,6 +146,9 @@
         "land": true,
         "3d building": false
       },
+      "threeDBuildingColor": [
+        9.665468314072013, 17.18305478057247, 31.1442867897876
+      ],
       "mapStyles": {}
     }
   }

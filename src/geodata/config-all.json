@@ -144,60 +144,60 @@
           }
         },
         {
-          "id": "qwert",
+          "id": "8fbtcjk",
           "type": "geojson",
           "config": {
             "dataId": "roomprice",
-            "label": "London Rental Price",
-            "color": [18, 92, 119],
+            "label": "London Rental Info",
+            "color": [30, 150, 190],
+            "highlightColor": [252, 242, 26, 255],
             "columns": {
               "geojson": "_geojson"
             },
             "isVisible": true,
             "visConfig": {
-              "opacity": 0.8,
-              "thickness": 0.2,
-              "strokeColor": null,
+              "opacity": 0.64,
+              "strokeOpacity": 0.8,
+              "thickness": 0.3,
+              "strokeColor": [255, 253, 196],
               "colorRange": {
+                "name": "ColorBrewer OrRd-6",
+                "type": "sequential",
+                "category": "ColorBrewer",
+                "colors": [
+                  "#fef0d9",
+                  "#fdd49e",
+                  "#fdbb84",
+                  "#fc8d59",
+                  "#e34a33",
+                  "#b30000"
+                ]
+              },
+              "strokeColorRange": {
                 "name": "Global Warming",
                 "type": "sequential",
                 "category": "Uber",
                 "colors": [
-                  "#7B3294",
-                  "#C2A5CF",
-                  "#F7F7F7",
-                  "#A6DBA0",
-                  "#008837"
+                  "#5A1846",
+                  "#900C3F",
+                  "#C70039",
+                  "#E3611C",
+                  "#F1920E",
+                  "#FFC300"
                 ]
               },
-              "strokeColorRange": {
-                "name": "UberPool",
-                "type": "diverging",
-                "category": "Uber",
-                "colors": [
-                  "#223F9A",
-                  "#2C51BE",
-                  "#482BBD",
-                  "#7A0DA6",
-                  "#AE0E7F",
-                  "#CF1750",
-                  "#E31A1A",
-                  "#FD7900",
-                  "#FAC200",
-                  "#FAE300"
-                ],
-                "reversed": false
-              },
               "radius": 10,
-              "sizeRange": [0, 3.6],
+              "sizeRange": [0, 10],
               "radiusRange": [0, 50],
               "heightRange": [0, 500],
               "elevationScale": 5,
+              "enableElevationZoomFactor": true,
               "stroked": true,
               "filled": true,
               "enable3d": false,
               "wireframe": false
             },
+            "hidden": false,
             "textLabel": [
               {
                 "field": null,
@@ -210,7 +210,7 @@
             ]
           },
           "visualChannels": {
-            "colorField": { "name": "Median", "type": "integer" },
+            "colorField": { "name": "rating", "type": "integer" },
             "colorScale": "quantile",
             "strokeColorField": null,
             "strokeColorScale": "quantile",
@@ -227,13 +227,31 @@
         "tooltip": {
           "fieldsToShow": {
             "roomprice": [
-              "Bedroom Category",
-              "Count of rents",
-              "Mean",
-              "Lower quartile",
-              "Median",
-              "Upper quartile",
-              "Postcode District"
+              "rating",
+              "Studio Mean",
+              "Studio Median",
+              "Studio Lower quartile",
+              "Studio Upper quartile",
+              "station",
+              "crimenumber",
+              "High incidence cases",
+              "Two Bedrooms Mean",
+              "One Bedroom Mean",
+              "One Bedroom Median",
+              "One Bedroom Lower quartile",
+              "One Bedroom Upper quartile",
+              "Two Bedrooms Mean",
+              "Two Bedrooms Median",
+              "Two Bedrooms Lower quartile",
+              "Two Bedrooms Upper quartile",
+              "Three Bedrooms Mean",
+              "Three Bedrooms Median",
+              "Three Bedrooms Lower quartile",
+              "Three Bedrooms Upper quartile",
+              "Four or More Bedrooms Mean",
+              "Four or More Bedrooms Median",
+              "Four or More Bedrooms Lower quartile",
+              "Four or More Bedrooms Upper quartile"
             ],
             "mty4ajbu": [
               "COMMON_NAME",
