@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import AutoSizer from "react-virtualized/dist/commonjs/AutoSizer";
 import KeplerGl from "kepler.gl";
 import logo from "./logo.png";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import "./App.css";
 // Kepler.gl actions
 import { addDataToMap } from "kepler.gl/actions";
@@ -16,6 +18,8 @@ import mapConfigJson from "./geodata/config-all.json";
 import roomData from "./geodata/ratings.js";
 import railStationData from "./geodata/UKRailStations.js";
 import testdata from "./geodata/line.js";
+import { Link } from "react-router-dom";
+import ExScreen from "./component/advertisement/ExScreen.js";
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN; // eslint-disable-line
 
 class App extends Component {
@@ -95,7 +99,9 @@ class App extends Component {
             )}
           </AutoSizer>
         </div>
-        <div className="ad"> Advertisement</div>
+        <Link to="/advertisement">
+          <div className="ad"> Advertisement</div>
+        </Link>
       </div>
     );
   }
