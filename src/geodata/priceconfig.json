@@ -48,7 +48,7 @@
               "radius": 10,
               "sizeRange": [0, 10],
               "radiusRange": [0, 50],
-              "heightRange": [0, 500],
+              "heightRange": [0, 200],
               "elevationScale": 5,
               "enableElevationZoomFactor": true,
               "stroked": true,
@@ -61,7 +61,7 @@
               {
                 "field": null,
                 "color": [255, 255, 255],
-                "size": 18,
+                "size": 12,
                 "offset": [0, 0],
                 "anchor": "start",
                 "alignment": "center"

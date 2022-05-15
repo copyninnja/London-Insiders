@@ -63,7 +63,7 @@
               {
                 "field": null,
                 "color": [255, 255, 255],
-                "size": 18,
+                "size": 12,
                 "offset": [0, 0],
                 "anchor": "start",
                 "alignment": "center"
@@ -215,8 +215,8 @@
     "mapState": {
       "bearing": 0,
       "dragRotate": false,
-      "latitude": 51.41892,
-      "longitude": 0.03332,
+      "latitude": 51.50399144,
+      "longitude": -0.103585,
       "pitch": 0,
       "zoom": 9.929903268834632,
       "isSplit": false

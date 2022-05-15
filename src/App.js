@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import AutoSizer from "react-virtualized/dist/commonjs/AutoSizer";
 import KeplerGl from "kepler.gl";
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import "./App.css";
 // Kepler.gl actions
 import { addDataToMap } from "kepler.gl/actions";
@@ -15,6 +15,7 @@ import mapConfigJson from "./geodata/config-all.json";
 
 import roomData from "./geodata/ratings.js";
 import railStationData from "./geodata/UKRailStations.js";
+import testdata from "./geodata/line.js";
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN; // eslint-disable-line
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
 
     const processedRoompData = Processors.processGeojson(roomData);
     const processedRailData = Processors.processGeojson(railStationData);
+    const test = Processors.processGeojson(testdata);
 
     // Create dataset structure
     const dataset1 = {
@@ -45,11 +47,20 @@ class App extends Component {
         id: "i91q045g",
       },
     };
+    const dataset3 = {
+      data: test,
+      info: {
+        label: "railway",
+        // this is used to match the dataId defined in nyc-config.json. For more details see API documentation.
+        // It is paramount that this id matches your configuration otherwise the configuration file will be ignored.
+        id: "dfghj",
+      },
+    };
     // addDataToMap action to inject dataset into kepler.gl instance
     //hide side bar options: {readOnly: true}
     this.props.dispatch(
       addDataToMap({
-        datasets: [dataset1, dataset2],
+        datasets: [dataset1, dataset2, dataset3],
         config: mapConfigJson,
       })
     );
@@ -63,24 +74,28 @@ class App extends Component {
 
   render() {
     return (
-      <div
-        style={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          minHeight: "70vh",
-        }}
-      >
-        <AutoSizer>
-          {({ height, width }) => (
-            <KeplerGl
-              mapboxApiAccessToken={MAPBOX_TOKEN}
-              id="map"
-              width={width}
-              height={height}
-            />
-          )}
-        </AutoSizer>
+      <div>
+        <img alt="ima" className="imageframe" src={logo}></img>
+        <div
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            minHeight: "70vh",
+          }}
+        >
+          <AutoSizer>
+            {({ height, width }) => (
+              <KeplerGl
+                mapboxApiAccessToken={MAPBOX_TOKEN}
+                id="map"
+                width={width}
+                height={height}
+              />
+            )}
+          </AutoSizer>
+        </div>
+        <div className="ad"> Advertisement</div>
       </div>
     );
   }
