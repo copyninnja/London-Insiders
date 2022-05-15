@@ -1,0 +1,16 @@
+.title {
+  text-align: center;
+}
+.nowRow {
+  display: flex;
+}
+h1 {
+  font-size: 5vh;
+}
+
+@media only screen and (max-width: 400px) {
+  .imageframe {
+    margin-top: -1.2vh;
+    width: 20vh;
+  }
+}

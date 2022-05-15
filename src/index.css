@@ -25,6 +25,6 @@ code {
 .imageframe {
   position: absolute;
   z-index: 100;
-  margin-top: -18px;
-  width: 18%;
+  margin-top: -1.2vw;
+  width: 20vw;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import App from "./App";
 import document from "global/document";
@@ -8,7 +9,6 @@ import { syncHistoryWithStore } from "react-router-redux";
 import { render } from "react-dom";
 import store from "./store";
 import { BrowserRouter, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import * as serviceWorker from "./serviceWorker";
 import ExScreen from "./component/advertisement/ExScreen.js";
 

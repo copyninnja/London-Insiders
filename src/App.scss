@@ -1,11 +1,29 @@
+// tbody {
+//   .row {
+//     display: flex;
+//     flex-direction: column;
+//     max-width: 500px;
+//     max-height: 600px;
+//     padding: 2px;
+//     font-family: ff-clan-web-pro, "Helvetica Neue", Helvetica, sans-serif;
+//     font-size: 11px;
+//     font-weight: 500;
+//     background-color: rgb(41, 50, 60);
+//     color: rgb(160, 167, 180);
+//     z-index: 1000;
+//     overflow-x: auto;
+//     .row__name {
+//     }
+//     .row__value {
+//     }
+//   }
+// }
 .row {
   display: block;
 }
-
 table {
   grid-template-columns: auto auto;
 }
-
 .App {
   text-align: center;
 }

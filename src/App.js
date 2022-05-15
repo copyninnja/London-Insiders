@@ -19,7 +19,6 @@ import roomData from "./geodata/ratings.js";
 import railStationData from "./geodata/UKRailStations.js";
 import testdata from "./geodata/line.js";
 import { Link } from "react-router-dom";
-import ExScreen from "./component/advertisement/ExScreen.js";
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN; // eslint-disable-line
 
 class App extends Component {
