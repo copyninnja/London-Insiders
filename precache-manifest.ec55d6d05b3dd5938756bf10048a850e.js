@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "53e959f17e5e8937dc84325aa1a4ab1f",
+    "revision": "1f33cbdaec0d410fa0b67f27716928c1",
     "url": "/London-Insiders/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/London-Insiders/static/css/2.68a81a89.chunk.css"
   },
   {
-    "revision": "7fa67331e28ae8358af4",
+    "revision": "5807f4dbd046f1623e06",
     "url": "/London-Insiders/static/css/main.e71d08eb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/London-Insiders/static/js/2.bd062c1a.chunk.js"
   },
   {
-    "revision": "7fa67331e28ae8358af4",
-    "url": "/London-Insiders/static/js/main.bf86a8a8.chunk.js"
+    "revision": "5807f4dbd046f1623e06",
+    "url": "/London-Insiders/static/js/main.6b76556c.chunk.js"
   },
   {
     "revision": "c31b62a7a3cd226a9f8e",
