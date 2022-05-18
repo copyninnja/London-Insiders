@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/London-Insiders/precache-manifest.a4ddd29b0cec05c1d833baa52038ef4d.js"
+  "/London-Insiders/precache-manifest.d07d631c44da1ddf4b6ba579adab00f3.js"
 );
 
 self.addEventListener('message', (event) => {
