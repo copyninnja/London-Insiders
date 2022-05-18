@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/London-Insiders/static/css/main.e71d08eb.chunk.css",
+    "main.js": "/London-Insiders/static/js/main.bf86a8a8.chunk.js",
+    "main.js.map": "/London-Insiders/static/js/main.bf86a8a8.chunk.js.map",
+    "runtime~main.js": "/London-Insiders/static/js/runtime~main.d2aeeb8b.js",
+    "runtime~main.js.map": "/London-Insiders/static/js/runtime~main.d2aeeb8b.js.map",
+    "static/css/2.68a81a89.chunk.css": "/London-Insiders/static/css/2.68a81a89.chunk.css",
+    "static/js/2.bd062c1a.chunk.js": "/London-Insiders/static/js/2.bd062c1a.chunk.js",
+    "static/js/2.bd062c1a.chunk.js.map": "/London-Insiders/static/js/2.bd062c1a.chunk.js.map",
+    "index.html": "/London-Insiders/index.html",
+    "precache-manifest.fc09acb835c4b125c1fae2875f9a31e7.js": "/London-Insiders/precache-manifest.fc09acb835c4b125c1fae2875f9a31e7.js",
+    "service-worker.js": "/London-Insiders/service-worker.js",
+    "static/css/2.68a81a89.chunk.css.map": "/London-Insiders/static/css/2.68a81a89.chunk.css.map",
+    "static/css/main.e71d08eb.chunk.css.map": "/London-Insiders/static/css/main.e71d08eb.chunk.css.map",
+    "static/media/house.png": "/London-Insiders/static/media/house.4bacece8.png",
+    "static/media/inside.png": "/London-Insiders/static/media/inside.3061d5cc.png",
+    "static/media/inside1.png": "/London-Insiders/static/media/inside1.b84dc5b0.png",
+    "static/media/logo.png": "/London-Insiders/static/media/logo.f133dcd5.png"
+  }
+}
