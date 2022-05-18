@@ -98,7 +98,7 @@ class App extends Component {
             )}
           </AutoSizer>
         </div>
-        <Link to={process.env.PUBLIC_URL + "/advertisement"}>
+        <Link to={"/advertisement"}>
           <div className="ad"> Advertisement</div>
         </Link>
       </div>
