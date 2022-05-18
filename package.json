@@ -1,7 +1,7 @@
 {
   "name": "London-Insiders",
   "version": "0.1.0",
-  "homepage": "https://copyninnja.github.io/London-Insiders",
+  "homepage": "https://copyninnja.github.io/London-Insiders/",
   "private": false,
   "dependencies": {
     "bootstrap": "^5.1.3",
